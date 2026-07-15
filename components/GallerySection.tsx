@@ -11,14 +11,14 @@ export default function GallerySection() {
   const [active, setActive] = useState<GalleryItem | null>(null);
 
   return (
-    <section id="realisations" className="bg-page">
+    <section id="realisations" className="bg-surface-sand">
       <SectionBackdrop>
         <div className="mx-auto max-w-container px-6 py-20">
           <div className="mx-auto mb-10 flex max-w-[620px] flex-col items-center gap-3.5 text-center">
             <div className="rounded-full bg-white/70 px-3.5 py-1.5 text-[12.5px] font-bold uppercase tracking-[1.5px] text-brand">
               Galerie
             </div>
-            <h2 className="text-[38px] font-extrabold tracking-tight text-ink">
+            <h2 className="text-[clamp(1.75rem,4.5vw,2.375rem)] font-extrabold tracking-tight text-ink">
               Ils nous font confiance sur leurs chantiers
             </h2>
             <p className="text-[17px] leading-relaxed text-ink-muted">

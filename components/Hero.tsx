@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { IconTruckDelivery, IconWall, IconBrandWhatsapp } from '@tabler/icons-react';
+import { IconMapPinFilled, IconWall, IconBrandWhatsapp } from '@tabler/icons-react';
 import { site, whatsappMessages } from '@/lib/content';
 import { waLink } from '@/lib/whatsapp';
 
@@ -7,28 +7,28 @@ export default function Hero() {
   return (
     <section
       id="accueil"
-      className="relative flex min-h-[620px] items-center overflow-hidden bg-brand-dark"
+      className="relative flex min-h-[620px] items-center overflow-hidden bg-brand-darker"
     >
       <Image
-        src="/images/gravier-en-camion.webp"
-        alt="Déchargement de gravier sur chantier à Lomé"
+        src="/images/equipe-chantier.webp"
+        alt="Équipe de génie civil sur un chantier à Lomé"
         fill
         priority
         sizes="100vw"
-        className="object-cover object-[center_60%]"
+        className="object-cover object-[center_35%]"
       />
       <div
         className="absolute inset-0"
         style={{
           background:
-            'linear-gradient(90deg, rgba(8,20,16,.86) 0%, rgba(10,30,24,.7) 45%, rgba(12,35,28,.42) 100%)',
+            'linear-gradient(90deg, rgba(7,28,16,.82) 0%, rgba(9,36,21,.58) 44%, rgba(11,44,26,.26) 100%)',
         }}
       />
       <div className="relative mx-auto w-full max-w-container px-6 py-24">
         <div className="flex max-w-[640px] animate-fadeInUp flex-col gap-6">
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border-[0.5px] border-white/25 bg-white/[.14] px-3.5 py-1.5 text-[12.5px] font-semibold uppercase tracking-wide text-[#d7f2e7]">
-            <IconTruckDelivery size={15} />
-            Livraison dans tout Lomé et environs
+          <div className="inline-flex w-fit items-center gap-2 rounded-full border-[0.5px] border-brand-light/40 bg-brand/25 px-4 py-1.5 text-[12.5px] font-bold uppercase tracking-[1.5px] text-brand-light backdrop-blur-sm">
+            <IconMapPinFilled size={15} />
+            Sagbado · Lomé · Togo
           </div>
           <h1 className="text-balance text-[34px] font-extrabold leading-[1.08] tracking-tight text-white md:text-[52px]">
             {site.tagline}

@@ -26,6 +26,10 @@ const IMAGES = [
   ['cinotruck.jpg', 'cinotruck.webp'],
   ['remorque.jpg', 'remorque.webp'],
   ['gravier en camion.jpeg', 'gravier-en-camion.webp'],
+  ['equipe de geni civil sur un chantier.png', 'equipe-chantier.webp'],
+  ['brique de fondation.webp', 'briques-fondation.webp'],
+  ['gravier en remorque.jpeg', 'gravier-en-remorque.webp'],
+  ['remorque.jpeg', 'remorque-reelle.webp'],
 ];
 
 const VIDEOS = [

@@ -8,14 +8,14 @@ import SectionBackdrop from './SectionBackdrop';
 
 export default function DeliverySection() {
   return (
-    <section id="livraison" className="bg-[#fafcfb]">
+    <section id="livraison" className="bg-white">
       <SectionBackdrop>
         <div className="mx-auto grid max-w-container grid-cols-[repeat(auto-fit,minmax(340px,1fr))] items-center gap-14 px-6 py-20">
           <RevealOnScroll className="flex flex-col gap-5">
             <div className="w-fit rounded-full bg-brand-badge px-3.5 py-1.5 text-[12.5px] font-bold uppercase tracking-[1.5px] text-brand">
               Logistique
             </div>
-            <h2 className="text-[38px] font-extrabold tracking-tight text-ink">{delivery.title}</h2>
+            <h2 className="text-[clamp(1.75rem,4.5vw,2.375rem)] font-extrabold tracking-tight text-ink">{delivery.title}</h2>
             <p className="text-[17px] leading-relaxed text-ink-muted">{delivery.text}</p>
             <div className="mt-1 flex flex-col gap-3.5">
               {delivery.fleet.map((f) => {
@@ -23,7 +23,7 @@ export default function DeliverySection() {
                 return (
                   <div key={f.label} className="flex items-center gap-3.5 text-[15.5px] text-ink-body">
                     <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-[10px] bg-brand-badge">
-                      {Icon ? <Icon size={18} color="#0F6E56" /> : null}
+                      {Icon ? <Icon size={18} color="#1F8A3B" /> : null}
                     </div>
                     <span>
                       <strong className="font-bold">{f.label}</strong> — {f.desc}
@@ -33,7 +33,7 @@ export default function DeliverySection() {
               })}
               <div className="flex items-center gap-3.5 text-[15.5px] text-ink-body">
                 <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-[10px] bg-brand-badge">
-                  <IconMapPin size={18} color="#0F6E56" />
+                  <IconMapPin size={18} color="#1F8A3B" />
                 </div>
                 <span>
                   Zones desservies : <span className="font-medium">{delivery.zones}</span>
@@ -44,7 +44,7 @@ export default function DeliverySection() {
               href={waLink(whatsappMessages.livraison)}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 inline-flex w-fit items-center gap-2 rounded-[10px] bg-brand px-7 py-[15px] text-[16px] font-bold text-white shadow-[0_3px_8px_rgba(15,110,86,.3)] transition-all duration-150 hover:scale-[1.02] hover:bg-brand-dark"
+              className="mt-2 inline-flex w-fit items-center gap-2 rounded-[10px] bg-brand px-7 py-[15px] text-[16px] font-bold text-white shadow-[0_3px_8px_rgba(31,138,59,.3)] transition-all duration-150 hover:scale-[1.02] hover:bg-brand-dark"
             >
               <IconCalendarTime size={19} />
               Planifier une livraison
@@ -52,7 +52,7 @@ export default function DeliverySection() {
           </RevealOnScroll>
 
           <RevealOnScroll className="grid grid-cols-2 gap-4">
-            <div className="col-span-2 aspect-video overflow-hidden rounded-2xl border-[0.5px] border-hairline bg-page shadow-[0_10px_30px_rgba(15,110,86,.1)]">
+            <div className="col-span-2 aspect-video overflow-hidden rounded-2xl border-[0.5px] border-hairline bg-page shadow-[0_10px_30px_rgba(31,138,59,.1)]">
               <Image
                 src={delivery.images.wide.src}
                 alt={delivery.images.wide.alt}

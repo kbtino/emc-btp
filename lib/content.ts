@@ -48,7 +48,7 @@ export const materials: Material[] = [
   { name: 'Fer à béton — chaud', desc: 'Barres laminées à chaud, du Ø6 au Ø32.', img: '/images/fer-chaud.webp' },
   { name: 'Fer à béton — froid', desc: 'Barres tréfilées à froid, haute précision.', img: '/images/fer-froid.webp' },
   { name: 'Fil de fer', desc: 'Recuit et galvanisé, pour ligature et clôture.', img: '/images/fil-de-fer.webp' },
-  { name: 'Briques de fondation', desc: 'Briques pleines pour fondations solides.', img: '/images/briques.webp' },
+  { name: 'Briques de fondation', desc: 'Briques pleines pour fondations solides.', img: '/images/briques-fondation.webp' },
   { name: 'Briques de construction', desc: 'Parpaings creux 10, 15 et 20 pour élévation.', img: '/images/briques.webp' },
 ];
 
@@ -88,9 +88,9 @@ export const delivery = {
   ],
   zones: 'Sagbado, Adidogomé, Agoè, Bè, Baguida, Adétikopé et tout le Grand Lomé',
   images: {
-    wide: { src: '/images/camion-10-roues.webp', alt: 'Camion 10 roues EMC BTP' },
-    a: { src: '/images/cinotruck.webp', alt: 'Sinotruk' },
-    b: { src: '/images/remorque.webp', alt: 'Remorque' },
+    wide: { src: '/images/gravier-en-remorque.webp', alt: 'Camion vert EMC BTP chargé de gravier en carrière' },
+    a: { src: '/images/remorque-reelle.webp', alt: 'Camion EMC BTP livrant du sable à Lomé' },
+    b: { src: '/images/camion-10-roues.webp', alt: 'Camion 10 roues' },
   },
 };
 
@@ -144,7 +144,8 @@ export const contactMaterialOptions = [
   'Sable',
   'Gravier',
   'Ciment',
-  'Remblage / Latérite',
+  'Remblage',
+  'Latérite',
   'Fer à béton — chaud',
   'Fer à béton — froid',
   'Fil de fer',

@@ -8,19 +8,19 @@ html {
 
 body {
   margin: 0;
-  background: #f5f7f5;
+  background: #F5F3ED;
   color: #1a1a1a;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
 a {
-  color: #0f6e56;
+  color: #1F8A3B;
   text-decoration: none;
 }
 
 a:hover {
-  color: #0a4f3d;
+  color: #13692B;
 }
 
 input::placeholder,

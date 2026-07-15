@@ -30,14 +30,14 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="bg-page">
+    <section id="contact" className="bg-surface-mint">
       <SectionBackdrop>
       <div className="mx-auto max-w-container px-6 py-20">
         <div className="mx-auto mb-10 flex max-w-[620px] flex-col items-center gap-3.5 text-center">
           <div className="rounded-full bg-white/70 px-3.5 py-1.5 text-[12.5px] font-bold uppercase tracking-[1.5px] text-brand">
             Contact
           </div>
-          <h2 className="text-[38px] font-extrabold tracking-tight text-ink">Parlons de votre chantier</h2>
+          <h2 className="text-[clamp(1.75rem,4.5vw,2.375rem)] font-extrabold tracking-tight text-ink">Parlons de votre chantier</h2>
           <p className="text-[17px] leading-relaxed text-ink-muted">
             Devis gratuit sous 24h. Réponse rapide par téléphone ou WhatsApp.
           </p>
@@ -96,7 +96,7 @@ export default function ContactSection() {
             <button
               type="button"
               onClick={send}
-              className="inline-flex items-center justify-center gap-2 rounded-[10px] bg-brand px-7 py-[15px] text-[16px] font-bold text-white shadow-[0_3px_8px_rgba(15,110,86,.3)] transition-all duration-150 hover:bg-brand-dark active:scale-[.99] active:opacity-[.78]"
+              className="inline-flex items-center justify-center gap-2 rounded-[10px] bg-brand px-7 py-[15px] text-[16px] font-bold text-white shadow-[0_3px_8px_rgba(31,138,59,.3)] transition-all duration-150 hover:bg-brand-dark active:scale-[.99] active:opacity-[.78]"
             >
               <IconSend size={18} />
               Envoyer la demande
@@ -110,7 +110,7 @@ export default function ContactSection() {
             <div className="flex flex-col gap-4.5 rounded-2xl border-[0.5px] border-hairline bg-white p-7 shadow-[0_1px_4px_rgba(0,0,0,.06)]">
               <div className="flex items-start gap-3.5">
                 <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-[10px] bg-brand-badge">
-                  <IconMapPin size={20} color="#0F6E56" />
+                  <IconMapPin size={20} color="#1F8A3B" />
                 </div>
                 <div>
                   <div className="text-[15px] font-bold text-ink">Adresse</div>
@@ -119,7 +119,7 @@ export default function ContactSection() {
               </div>
               <div className="flex items-start gap-3.5">
                 <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-[10px] bg-brand-badge">
-                  <IconPhone size={20} color="#0F6E56" />
+                  <IconPhone size={20} color="#1F8A3B" />
                 </div>
                 <div>
                   <div className="text-[15px] font-bold text-ink">Téléphone</div>
@@ -144,7 +144,7 @@ export default function ContactSection() {
               </div>
               <div className="flex items-start gap-3.5">
                 <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-[10px] bg-brand-badge">
-                  <IconClock size={20} color="#0F6E56" />
+                  <IconClock size={20} color="#1F8A3B" />
                 </div>
                 <div>
                   <div className="text-[15px] font-bold text-ink">Horaires</div>
@@ -166,7 +166,7 @@ export default function ContactSection() {
                 title="Dépôt EMC BTP — Sagbado, Lomé"
               />
               <div className="pointer-events-none absolute bottom-3 left-3 flex items-center gap-1.5 rounded-full bg-black/60 px-3 py-1.5 text-[12px] font-medium text-white backdrop-blur-sm">
-                <IconMapPinFilled size={14} color="#7fd4bc" />
+                <IconMapPinFilled size={14} color="#86D69A" />
                 Dépôt EMC BTP · Sagbado
               </div>
             </div>

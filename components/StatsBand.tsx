@@ -51,7 +51,7 @@ function StatCounter({ value }: { value: string }) {
   }, [number, prefix, suffix, value]);
 
   return (
-    <div ref={ref} className="text-[30px] font-extrabold tracking-tight text-white [font-variant-numeric:tabular-nums]">
+    <div ref={ref} className="text-[clamp(1.6rem,4vw,1.875rem)] font-extrabold tracking-tight text-white [font-variant-numeric:tabular-nums]">
       {display}
     </div>
   );
@@ -61,7 +61,7 @@ export default function StatsBand() {
   return (
     <section
       style={{
-        background: 'linear-gradient(135deg, #0F6E56 0%, #0c5c48 55%, #0a4f3d 100%)',
+        background: 'linear-gradient(135deg, #1F8A3B 0%, #146E2E 55%, #0A3D1E 100%)',
       }}
     >
       <div className="mx-auto grid max-w-container grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-8 px-6 py-14">
@@ -70,11 +70,11 @@ export default function StatsBand() {
           return (
             <div key={s.label} className="flex items-center gap-4">
               <div className="flex h-[52px] w-[52px] flex-shrink-0 items-center justify-center rounded-xl border-[0.5px] border-white/[.22] bg-white/[.14]">
-                {Icon ? <Icon size={26} color="#7fd4bc" /> : null}
+                {Icon ? <Icon size={26} color="#86D69A" /> : null}
               </div>
               <div>
                 <StatCounter value={s.value} />
-                <div className="text-[13.5px] font-medium text-[#a9dccb]">{s.label}</div>
+                <div className="text-[13.5px] font-medium text-[#A7D8B5]">{s.label}</div>
               </div>
             </div>
           );
