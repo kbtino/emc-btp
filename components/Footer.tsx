@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { IconBrandFacebook, IconBrandWhatsapp, IconBrandTiktok } from '@tabler/icons-react';
 import { navLinks, site, whatsappMessages } from '@/lib/content';
 import { waLink } from '@/lib/whatsapp';
+import { asset } from '@/lib/asset';
 
 export default function Footer() {
   return (
@@ -10,7 +11,7 @@ export default function Footer() {
         <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-10">
           <div className="flex flex-col gap-3.5">
             <div className="w-fit rounded-xl bg-white px-4 py-2.5">
-              <Image src="/logo-emc.png" alt="EMC BTP" width={120} height={46} className="h-[46px] w-auto mix-blend-multiply" />
+              <Image src={asset('/logo-emc.png')} alt="EMC BTP" width={120} height={46} className="h-[46px] w-auto mix-blend-multiply" />
             </div>
             <p className="max-w-[300px] text-[14px] leading-relaxed">
               Équipement Matériaux de Construction — vente, livraison et accompagnement de chantiers à Lomé, Togo.

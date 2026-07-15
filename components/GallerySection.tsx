@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { IconPlayerPlayFilled } from '@tabler/icons-react';
 import { gallery, type GalleryItem } from '@/lib/content';
+import { asset } from '@/lib/asset';
 import RevealOnScroll from './RevealOnScroll';
 import Lightbox from './Lightbox';
 import SectionBackdrop from './SectionBackdrop';
@@ -37,7 +38,7 @@ export default function GallerySection() {
                   {g.isVideo ? (
                     <>
                       <video
-                        src={g.src}
+                        src={asset(g.src)}
                         muted
                         preload="metadata"
                         className="h-full w-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.06]"
@@ -51,7 +52,7 @@ export default function GallerySection() {
                   ) : (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
-                      src={g.src}
+                      src={asset(g.src)}
                       alt={g.caption}
                       loading="lazy"
                       className="h-full w-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.06]"

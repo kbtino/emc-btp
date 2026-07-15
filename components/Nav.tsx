@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { IconFileInvoice, IconMenu2, IconX } from '@tabler/icons-react';
 import { navLinks } from '@/lib/content';
+import { asset } from '@/lib/asset';
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -14,7 +15,7 @@ export default function Nav() {
       <div className="mx-auto flex h-[68px] max-w-container items-center justify-between gap-6 px-6">
         <a href="#accueil" className="flex flex-shrink-0 items-center gap-2.5">
           <Image
-            src="/logo-emc.png"
+            src={asset('/logo-emc.png')}
             alt="EMC BTP"
             width={160}
             height={52}
@@ -65,7 +66,7 @@ export default function Nav() {
           }`}
         >
           <div className="mb-6 flex items-center justify-between">
-            <Image src="/logo-emc.png" alt="EMC BTP" width={120} height={40} className="h-10 w-auto mix-blend-multiply" />
+            <Image src={asset('/logo-emc.png')} alt="EMC BTP" width={120} height={40} className="h-10 w-auto mix-blend-multiply" />
             <button type="button" aria-label="Fermer le menu" onClick={() => setOpen(false)} className="p-1 text-ink">
               <IconX size={26} />
             </button>

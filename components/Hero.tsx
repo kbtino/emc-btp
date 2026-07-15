@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { IconMapPinFilled, IconWall, IconBrandWhatsapp } from '@tabler/icons-react';
 import { site, whatsappMessages } from '@/lib/content';
 import { waLink } from '@/lib/whatsapp';
+import { asset } from '@/lib/asset';
 
 export default function Hero() {
   // Titre bicolore façon maquette page1 : partie "matériaux" en blanc, partie
@@ -16,7 +17,7 @@ export default function Hero() {
       className="relative flex min-h-[620px] items-center overflow-hidden bg-brand-darker"
     >
       <Image
-        src="/images/equipe-chantier.webp"
+        src={asset('/images/equipe-chantier.webp')}
         alt="Équipe de génie civil sur un chantier à Lomé"
         fill
         priority

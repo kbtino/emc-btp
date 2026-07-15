@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import { IconX } from '@tabler/icons-react';
 import type { GalleryItem } from '@/lib/content';
+import { asset } from '@/lib/asset';
 
 export default function Lightbox({ item, onClose }: { item: GalleryItem; onClose: () => void }) {
   useEffect(() => {
@@ -20,7 +21,7 @@ export default function Lightbox({ item, onClose }: { item: GalleryItem; onClose
     >
       {item.isVideo ? (
         <video
-          src={item.src}
+          src={asset(item.src)}
           controls
           autoPlay
           onClick={(e) => e.stopPropagation()}
@@ -29,7 +30,7 @@ export default function Lightbox({ item, onClose }: { item: GalleryItem; onClose
       ) : (
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          src={item.src}
+          src={asset(item.src)}
           alt="Aperçu"
           onClick={(e) => e.stopPropagation()}
           className="max-h-[88%] max-w-[92%] rounded-xl object-contain shadow-[0_20px_60px_rgba(0,0,0,.5)]"

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { IconTag } from '@tabler/icons-react';
 import { materials, whatsappMessages } from '@/lib/content';
 import { waLink } from '@/lib/whatsapp';
+import { asset } from '@/lib/asset';
 import RevealOnScroll from './RevealOnScroll';
 import SectionBackdrop from './SectionBackdrop';
 
@@ -31,7 +32,7 @@ export default function MaterialsGrid() {
                   />
                   <div className="aspect-[4/3] overflow-hidden bg-page">
                     <Image
-                      src={m.img}
+                      src={asset(m.img)}
                       alt={m.name}
                       width={480}
                       height={360}

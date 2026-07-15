@@ -3,6 +3,7 @@ import { IconCalendarTime, IconMapPin } from '@tabler/icons-react';
 import { iconMap, type IconName } from '@/lib/icons';
 import { delivery, whatsappMessages } from '@/lib/content';
 import { waLink } from '@/lib/whatsapp';
+import { asset } from '@/lib/asset';
 import RevealOnScroll from './RevealOnScroll';
 import SectionBackdrop from './SectionBackdrop';
 
@@ -54,7 +55,7 @@ export default function DeliverySection() {
           <RevealOnScroll className="grid grid-cols-2 gap-4">
             <div className="col-span-2 aspect-video overflow-hidden rounded-2xl border-[0.5px] border-hairline bg-page shadow-[0_10px_30px_rgba(31,138,59,.1)]">
               <Image
-                src={delivery.images.wide.src}
+                src={asset(delivery.images.wide.src)}
                 alt={delivery.images.wide.alt}
                 width={800}
                 height={450}
@@ -64,7 +65,7 @@ export default function DeliverySection() {
             </div>
             <div className="aspect-[4/3] overflow-hidden rounded-xl border-[0.5px] border-hairline bg-page">
               <Image
-                src={delivery.images.a.src}
+                src={asset(delivery.images.a.src)}
                 alt={delivery.images.a.alt}
                 width={400}
                 height={300}
@@ -74,7 +75,7 @@ export default function DeliverySection() {
             </div>
             <div className="aspect-[4/3] overflow-hidden rounded-xl border-[0.5px] border-hairline bg-page">
               <Image
-                src={delivery.images.b.src}
+                src={asset(delivery.images.b.src)}
                 alt={delivery.images.b.alt}
                 width={400}
                 height={300}

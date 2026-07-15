@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { IconVolume, IconVolumeOff } from '@tabler/icons-react';
 import { companyVideo } from '@/lib/content';
+import { asset } from '@/lib/asset';
 
 // Lecture auto quand la vidéo entre dans le viewport, pause quand elle en sort.
 // On tente d'ABORD de démarrer AVEC le son : les navigateurs l'autorisent si le
@@ -61,7 +62,7 @@ export default function CompanyVideo() {
     <div className="relative">
       <video
         ref={ref}
-        src={companyVideo.src}
+        src={asset(companyVideo.src)}
         controls
         playsInline
         preload="metadata"
