@@ -12,6 +12,7 @@ import {
 import { site, contactMaterialOptions, whatsappMessages } from '@/lib/content';
 import { waLink } from '@/lib/whatsapp';
 import RevealOnScroll from './RevealOnScroll';
+import SectionBackdrop from './SectionBackdrop';
 
 export default function ContactSection() {
   const nameRef = useRef<HTMLInputElement>(null);
@@ -30,9 +31,12 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="bg-page">
-      <div className="mx-auto max-w-container px-6 py-24">
-        <div className="mx-auto mb-14 flex max-w-[620px] flex-col gap-3.5 text-center">
-          <div className="text-[12.5px] font-bold uppercase tracking-[1.5px] text-brand">Contact</div>
+      <SectionBackdrop>
+      <div className="mx-auto max-w-container px-6 py-20">
+        <div className="mx-auto mb-10 flex max-w-[620px] flex-col items-center gap-3.5 text-center">
+          <div className="rounded-full bg-white/70 px-3.5 py-1.5 text-[12.5px] font-bold uppercase tracking-[1.5px] text-brand">
+            Contact
+          </div>
           <h2 className="text-[38px] font-extrabold tracking-tight text-ink">Parlons de votre chantier</h2>
           <p className="text-[17px] leading-relaxed text-ink-muted">
             Devis gratuit sous 24h. Réponse rapide par téléphone ou WhatsApp.
@@ -103,7 +107,7 @@ export default function ContactSection() {
           </RevealOnScroll>
 
           <RevealOnScroll className="flex flex-col gap-4">
-            <div className="flex flex-col gap-4.5 rounded-2xl border-[0.5px] border-hairline bg-white p-7">
+            <div className="flex flex-col gap-4.5 rounded-2xl border-[0.5px] border-hairline bg-white p-7 shadow-[0_1px_4px_rgba(0,0,0,.06)]">
               <div className="flex items-start gap-3.5">
                 <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-[10px] bg-brand-badge">
                   <IconMapPin size={20} color="#0F6E56" />
@@ -169,6 +173,7 @@ export default function ContactSection() {
           </RevealOnScroll>
         </div>
       </div>
+      </SectionBackdrop>
     </section>
   );
 }

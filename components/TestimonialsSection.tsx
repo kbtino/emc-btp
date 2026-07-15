@@ -1,10 +1,11 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { IconStarFilled, IconCircleCheckFilled, IconAlertCircle } from '@tabler/icons-react';
+import { IconStarFilled, IconCircleCheckFilled, IconAlertCircle, IconQuote } from '@tabler/icons-react';
 import { site, testimonials as seedTestimonials, type Testimonial } from '@/lib/content';
 import { fetchApprovedReviews, submitReview, reviewsBackendEnabled } from '@/lib/supabaseClient';
 import RevealOnScroll from './RevealOnScroll';
+import SectionBackdrop from './SectionBackdrop';
 
 export default function TestimonialsSection() {
   const [localReviews, setLocalReviews] = useState<Testimonial[]>([]);
@@ -75,21 +76,32 @@ export default function TestimonialsSection() {
 
   return (
     <section className="bg-white">
-      <div className="mx-auto max-w-container px-6 py-24">
-        <div className="mx-auto mb-14 flex max-w-[620px] flex-col gap-3.5 text-center">
-          <div className="text-[12.5px] font-bold uppercase tracking-[1.5px] text-brand">Témoignages</div>
+      <SectionBackdrop>
+        <div className="mx-auto max-w-container px-6 py-20">
+        <div className="mx-auto mb-10 flex max-w-[620px] flex-col items-center gap-3.5 text-center">
+          <div className="rounded-full bg-brand-badge px-3.5 py-1.5 text-[12.5px] font-bold uppercase tracking-[1.5px] text-brand">
+            Témoignages
+          </div>
           <h2 className="text-[38px] font-extrabold tracking-tight text-ink">Ce que disent nos clients</h2>
         </div>
 
         <div className="mx-auto flex max-w-[820px] flex-col gap-7">
           <RevealOnScroll>
-            <div className="flex flex-col items-center gap-5.5 rounded-2xl border-[0.5px] border-hairline bg-white px-11 py-12 text-center shadow-[0_10px_30px_rgba(0,0,0,.05)]">
+            <div className="relative flex flex-col items-center gap-5.5 overflow-hidden rounded-2xl border-[0.5px] border-hairline bg-white px-11 py-12 text-center shadow-[0_14px_36px_rgba(15,110,86,.08)]">
+              <div
+                className="absolute -top-2 left-1/2 h-1 w-24 -translate-x-1/2 rounded-full"
+                style={{ background: 'linear-gradient(90deg, #0F6E56, #f4a460)' }}
+              />
+              <IconQuote
+                size={92}
+                className="pointer-events-none absolute -top-3 left-6 text-brand opacity-[.06]"
+              />
               <div className="flex gap-1">
                 {[1, 2, 3, 4, 5].map((n) => (
                   <IconStarFilled key={n} size={20} color={activeStars(n)} />
                 ))}
               </div>
-              <p className="text-balance text-[23px] font-medium leading-snug text-[#1f3a30]">
+              <p className="relative text-balance text-[23px] font-medium leading-snug text-[#1f3a30]">
                 « {active.quote} »
               </p>
               <div>
@@ -191,7 +203,8 @@ export default function TestimonialsSection() {
             </div>
           </RevealOnScroll>
         </div>
-      </div>
+        </div>
+      </SectionBackdrop>
     </section>
   );
 }
