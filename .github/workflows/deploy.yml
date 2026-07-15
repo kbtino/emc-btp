@@ -34,6 +34,8 @@ jobs:
 
       - name: Build (export statique)
         run: npm run build
+        env:
+          DEPLOY_TARGET: github-pages
 
       - name: Empêcher Jekyll d'ignorer les dossiers _next
         run: touch out/.nojekyll

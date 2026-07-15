@@ -1,10 +1,11 @@
 /** @type {import('next').NextConfig} */
-// GitHub Pages sert le site sur https://<user>.github.io/emc-btp/ (sous-chemin).
-// On applique le basePath en production uniquement ; en dev (npm run dev), il reste vide
-// pour que le site tourne sur http://localhost:3000/.
+// GitHub Pages sert le site sur https://<user>.github.io/emc-btp/ (sous-chemin), donc il
+// faut un basePath. Vercel (et le dev local) servent le site a la racine, donc basePath vide.
+// On applique le basePath UNIQUEMENT quand on build pour GitHub Pages (variable definie
+// dans le workflow .github/workflows/deploy.yml). Partout ailleurs il reste vide.
 const repo = 'emc-btp';
-const isProd = process.env.NODE_ENV === 'production';
-const basePath = isProd ? `/${repo}` : '';
+const isGithubPages = process.env.DEPLOY_TARGET === 'github-pages';
+const basePath = isGithubPages ? `/${repo}` : '';
 
 const nextConfig = {
   output: 'export',
