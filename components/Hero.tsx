@@ -4,6 +4,12 @@ import { site, whatsappMessages } from '@/lib/content';
 import { waLink } from '@/lib/whatsapp';
 
 export default function Hero() {
+  // Titre bicolore façon maquette page1 : partie "matériaux" en blanc, partie
+  // "livraison" (après la virgule) en jaune doré. On ne modifie aucun mot.
+  const commaIndex = site.tagline.indexOf(',');
+  const headlineHead = commaIndex >= 0 ? site.tagline.slice(0, commaIndex + 1) : site.tagline;
+  const headlineTail = commaIndex >= 0 ? site.tagline.slice(commaIndex + 1).trim() : '';
+
   return (
     <section
       id="accueil"
@@ -21,7 +27,7 @@ export default function Hero() {
         className="absolute inset-0"
         style={{
           background:
-            'linear-gradient(90deg, rgba(7,28,16,.82) 0%, rgba(9,36,21,.58) 44%, rgba(11,44,26,.26) 100%)',
+            'linear-gradient(90deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.3) 50%, rgba(0,0,0,.06) 100%)',
         }}
       />
       <div className="relative mx-auto w-full max-w-container px-6 py-24">
@@ -31,7 +37,13 @@ export default function Hero() {
             Sagbado · Lomé · Togo
           </div>
           <h1 className="text-balance text-[34px] font-extrabold leading-[1.08] tracking-tight text-white md:text-[52px]">
-            {site.tagline}
+            {headlineHead}
+            {headlineTail && (
+              <>
+                {' '}
+                <span className="text-accent">{headlineTail}</span>
+              </>
+            )}
           </h1>
           <p className="max-w-[540px] text-balance text-[17px] leading-[1.55] text-white/85 md:text-[19px]">
             {site.description}

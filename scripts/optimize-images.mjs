@@ -49,10 +49,10 @@ async function run() {
     console.log('image', from, '->', to);
   }
 
-  await sharp(path.join(SRC, 'logo EMC.png'))
-    .resize(400, 400, { fit: 'inside', withoutEnlargement: true })
+  await sharp(path.join(SRC, 'logo EMC1.png'))
+    .resize(600, 600, { fit: 'inside', withoutEnlargement: true })
     .toFile(path.join(ROOT, '..', 'public', 'logo-emc.png'));
-  console.log('logo EMC.png -> logo-emc.png');
+  console.log('logo EMC1.png -> logo-emc.png');
 
   for (const [from, to] of VIDEOS) {
     await copyFile(path.join(SRC, from), path.join(OUT_VIDEOS, to));
